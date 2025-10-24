@@ -129,14 +129,22 @@ Mahasiswa dapat memahami bagaimana sebuah objek dibuat dan digunakan dalam progr
 
 
 ## Quiz
-1.	Apakah OOP selalu lebih baik dari prosedural?
-Jawaban: Tidak selalu. OOP lebih baik untuk program besar dan kompleks, sedangkan prosedural lebih cocok untuk program kecil yang sederhana.
-2.	Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
-Jawaban: Ketika kita ingin meminimalkan efek samping, membuat kode yang lebih ringkas, dan fokus pada transformasi data (misalnya pada operasi matematis atau analisis data).
-3.	Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
-Jawaban: OOP meningkatkan maintainability dengan modularitas; prosedural lebih cepat untuk proyek kecil; fungsional meningkatkan reliability dan parallelism.
-4.	Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
-Jawaban: Karena POS terdiri dari banyak entitas (produk, transaksi, pelanggan) yang bisa dimodelkan sebagai objek dengan hubungan antarclass.
-5.	Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
-Jawaban: Dengan menggunakan fungsi murni dan konsep higher-order function, sehingga tidak perlu menulis ulang logika yang sama di banyak tempat.
+1. Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?
+Jawaban:
+Atribut sebaiknya dideklarasikan sebagai private agar data dalam class tidak bisa diakses atau diubah secara langsung dari luar class.
+Hal ini merupakan prinsip enkapsulasi, yaitu melindungi data dari manipulasi yang tidak diinginkan dan menjaga integritas objek. Dengan private, perubahan nilai atribut hanya bisa dilakukan melalui method resmi seperti getter dan setter, sehingga kontrol terhadap data tetap terjaga.
+
+2. Apa fungsi getter dan setter dalam enkapsulasi?
+Jawaban:
+•	Getter berfungsi untuk mengambil nilai atribut private agar bisa dibaca oleh class lain.
+•	Setter berfungsi untuk mengubah atau menetapkan nilai atribut private dengan cara yang terkontrol.
+Dengan getter dan setter, kita bisa menambahkan validasi, aturan logika, atau pembatasan akses sebelum data dibaca atau diubah, sehingga penerapan enkapsulasi menjadi efektif.
+3. Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
+Jawaban:
+Class Produk berfungsi sebagai model dasar (blueprint) untuk mewakili data produk dalam aplikasi POS.
+Dengan adanya class ini, pengembang dapat:
+•	Mengelola data produk secara terstruktur dan konsisten.
+•	Menambahkan fitur lanjutan seperti perhitungan total harga, manajemen stok, kategori produk, atau integrasi dengan transaksi penjualan.
+•	Mempermudah pemeliharaan dan pengembangan sistem, karena logika terkait produk tersentral di satu class.
+ 
 
