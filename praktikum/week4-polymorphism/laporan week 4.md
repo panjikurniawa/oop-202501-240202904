@@ -9,8 +9,11 @@ Topik: Polymorphism
 ---
 
 ## Tujuan
+
 1.memahami konsep Polymorphism dalam pemrograman berorientasi objek.
+
 2.dapat mengimplementasikan Overriding method pada subclass.
+
 3.dapat mengaplikasikan Dynamic Binding menggunakan array objek dari superclass.
 
 
@@ -113,9 +116,13 @@ public class MainPolymorphism {
 
 
 ## Analisis
+
 1.Method getInfo() pada setiap subclass menimpa method di superclass (overriding), menampilkan informasi tambahan sesuai jenis produk.
+
 2.Saat program dijalankan, method yang dipanggil menyesuaikan tipe objek aktual pada array Produk[], inilah contoh Dynamic Binding.
+
 3.Keuntungan pendekatan ini: kode lebih fleksibel, mudah diperluas, dan tetap terstruktur.
+
 4.Kendala yang dihadapi: awalnya terjadi error tipe data karena class Produk dan subclass berbeda package, diselesaikan dengan import   com.upb.agripos.model.*;.
 
 
