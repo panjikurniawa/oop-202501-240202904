@@ -139,21 +139,35 @@ Mahasiswa dapat memahami bagaimana sebuah objek dibuat dan digunakan dalam progr
 
 ## Quiz
 1. Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?
+   
 Jawaban:
+
 Atribut sebaiknya dideklarasikan sebagai private agar data dalam class tidak bisa diakses atau diubah secara langsung dari luar class.
 Hal ini merupakan prinsip enkapsulasi, yaitu melindungi data dari manipulasi yang tidak diinginkan dan menjaga integritas objek. Dengan private, perubahan nilai atribut hanya bisa dilakukan melalui method resmi seperti getter dan setter, sehingga kontrol terhadap data tetap terjaga.
 
-2. Apa fungsi getter dan setter dalam enkapsulasi?
+3. Apa fungsi getter dan setter dalam enkapsulasi?
+   
 Jawaban:
+
 •	Getter berfungsi untuk mengambil nilai atribut private agar bisa dibaca oleh class lain.
+
 •	Setter berfungsi untuk mengubah atau menetapkan nilai atribut private dengan cara yang terkontrol.
-Dengan getter dan setter, kita bisa menambahkan validasi, aturan logika, atau pembatasan akses sebelum data dibaca atau diubah, sehingga penerapan enkapsulasi menjadi efektif.
-3. Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
+
+   Dengan getter dan setter, kita bisa menambahkan validasi, aturan logika, atau pembatasan akses sebelum data dibaca atau diubah,   
+   sehingga penerapan enkapsulasi menjadi efektif.
+   
+5. Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
+   
 Jawaban:
+
 Class Produk berfungsi sebagai model dasar (blueprint) untuk mewakili data produk dalam aplikasi POS.
 Dengan adanya class ini, pengembang dapat:
+
 •	Mengelola data produk secara terstruktur dan konsisten.
-•	Menambahkan fitur lanjutan seperti perhitungan total harga, manajemen stok, kategori produk, atau integrasi dengan transaksi penjualan.
+
+•	Menambahkan fitur lanjutan seperti perhitungan total harga, manajemen stok, kategori produk, atau integrasi dengan transaksi 
+    penjualan.
+    
 •	Mempermudah pemeliharaan dan pengembangan sistem, karena logika terkait produk tersentral di satu class.
  
 
