@@ -9,11 +9,9 @@ Topik: Polymorphism
 ---
 
 ## Tujuan
-•	memahami konsep Polymorphism dalam pemrograman berorientasi objek.
-
-•	dapat mengimplementasikan Overriding method pada subclass.
-
-•   dapat mengaplikasikan Dynamic Binding menggunakan array objek dari superclass.
+1.memahami konsep Polymorphism dalam pemrograman berorientasi objek.
+2.dapat mengimplementasikan Overriding method pada subclass.
+3.dapat mengaplikasikan Dynamic Binding menggunakan array objek dari superclass.
 
 
 ## Dasar Teori
@@ -115,13 +113,10 @@ public class MainPolymorphism {
 
 
 ## Analisis
-•	Method getInfo() pada setiap subclass menimpa method di superclass (overriding), menampilkan informasi tambahan sesuai jenis produk.
-
-•	Saat program dijalankan, method yang dipanggil menyesuaikan tipe objek aktual pada array Produk[], inilah contoh Dynamic Binding.
-
-•	Keuntungan pendekatan ini: kode lebih fleksibel, mudah diperluas, dan tetap terstruktur.
-
-•	Kendala yang dihadapi: awalnya terjadi error tipe data karena class Produk dan subclass berbeda package, diselesaikan dengan import com.upb.agripos.model.*;.
+1.Method getInfo() pada setiap subclass menimpa method di superclass (overriding), menampilkan informasi tambahan sesuai jenis produk.
+2.Saat program dijalankan, method yang dipanggil menyesuaikan tipe objek aktual pada array Produk[], inilah contoh Dynamic Binding.
+3.Keuntungan pendekatan ini: kode lebih fleksibel, mudah diperluas, dan tetap terstruktur.
+4.Kendala yang dihadapi: awalnya terjadi error tipe data karena class Produk dan subclass berbeda package, diselesaikan dengan import   com.upb.agripos.model.*;.
 
 
 ## Kesimpulan
@@ -133,22 +128,22 @@ Dengan menggunakan Polymorphism dan Dynamic Binding, program dapat memanggil met
 
 Jawaban: 
 
-Overloading terjadi ketika dua atau lebih method memiliki nama yang sama, tetapi parameter berbeda (jumlah atau tipe datanya). Ini ditentukan saat compile time.
-Contoh:
-public void tambahStok(int jumlah) { ... }
-public void tambahStok(double jumlah) { ... }
+   Overloading terjadi ketika dua atau lebih method memiliki nama yang sama, tetapi parameter berbeda (jumlah atau tipe datanya). Ini        ditentukan saat compile time.
+   Contoh:
+   public void tambahStok(int jumlah) { ... }
+   public void tambahStok(double jumlah) { ... }
 
-Overriding terjadi ketika subclass mengubah implementasi method yang ada di superclass dengan nama, parameter, dan tipe kembalian yang sama. Ini ditentukan saat runtime (dynamic binding).
-Contoh:
-@Override
-public String getInfo() { ... }
+   Overriding terjadi ketika subclass mengubah implementasi method yang ada di superclass dengan nama, parameter, dan tipe kembalian yang    sama. Ini ditentukan saat runtime (dynamic binding).
+   Contoh:
+   @Override
+   public String getInfo() { ... }
  
 2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?
 
 Jawaban:
 
-Dalam dynamic binding, Java akan memanggil method yang sesuai dengan tipe objek sebenarnya (runtime type), bukan tipe referensinya.
-Jadi, jika sebuah variabel bertipe Produk tetapi berisi objek Pupuk, maka method getInfo() milik class Pupuk yang akan dijalankan, bukan milik Produk.
+    Dalam dynamic binding, Java akan memanggil method yang sesuai dengan tipe objek sebenarnya (runtime type), bukan tipe referensinya.
+     Jadi, jika sebuah variabel bertipe Produk tetapi berisi objek Pupuk, maka method getInfo() milik class Pupuk yang akan dijalankan,       bukan milik Produk.
 Contoh:
 Produk p = new Pupuk(...);
 p.getInfo(); // Memanggil getInfo() milik class Pupuk
