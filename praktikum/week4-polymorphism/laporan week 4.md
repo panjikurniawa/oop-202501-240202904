@@ -10,9 +10,7 @@ Topik: Polymorphism
 
 ## Tujuan
 •	memahami konsep Polymorphism dalam pemrograman berorientasi objek.
-
 •	dapat mengimplementasikan Overriding method pada subclass.
-
 • dapat mengaplikasikan Dynamic Binding menggunakan array objek dari superclass.
 
 
@@ -126,8 +124,7 @@ public class MainPolymorphism {
 Dengan menggunakan Polymorphism dan Dynamic Binding, program dapat memanggil method yang sesuai dengan tipe objek aktual tanpa harus mengetahui jenis subclass secara eksplisit. Hal ini membuat kode lebih efisien dan mudah dikembangkan.
 
 ## Quiz
-1.	Apa perbedaan antara Overloading dan Overriding?
-Jawaban: Overloading terjadi ketika dua atau lebih method memiliki nama yang sama, tetapi parameter berbeda (jumlah atau tipe datanya). Ini ditentukan saat compile time.
+1.	Apa perbedaan antara Overloading dan Overriding?Jawaban: Overloading terjadi ketika dua atau lebih method memiliki nama yang sama, tetapi parameter berbeda (jumlah atau tipe datanya). Ini ditentukan saat compile time.
 Contoh:
 public void tambahStok(int jumlah) { ... }
 public void tambahStok(double jumlah) { ... }
@@ -137,16 +134,14 @@ Contoh:
 @Override
 public String getInfo() { ... }
  
-2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?
-Jawaban:
+2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?Jawaban:
 Dalam dynamic binding, Java akan memanggil method yang sesuai dengan tipe objek sebenarnya (runtime type), bukan tipe referensinya.
 Jadi, jika sebuah variabel bertipe Produk tetapi berisi objek Pupuk, maka method getInfo() milik class Pupuk yang akan dijalankan, bukan milik Produk.
 Contoh:
 Produk p = new Pupuk(...);
 p.getInfo(); // Memanggil getInfo() milik class Pupuk
   
-3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian
-Jawaban:
+3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.Jawaban:
 Contoh polymorphism di sistem POS non-pertanian adalah pada toko elektronik.
 Misalnya, terdapat superclass Barang dan subclass seperti Laptop, Smartphone, dan Televisi.
 Masing-masing mengoverride method getInfo() untuk menampilkan detail spesifik:
