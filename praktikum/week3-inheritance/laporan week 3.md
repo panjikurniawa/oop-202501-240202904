@@ -111,11 +111,18 @@ public class MainInheritance {
 
 
 ## Analisis
-•	Program menggunakan inheritance untuk mengelompokkan produk berdasarkan jenisnya tanpa mengulang atribut dasar (kode, nama, harga, stok).
-•	Superclass Produk menjadi pusat atribut dan method umum, sementara subclass (Benih, Pupuk, AlatPertanian) menambahkan atribut spesifik.
-•	Dengan inheritance, program lebih mudah dikembangkan (misalnya menambah subclass baru tanpa mengubah kode lama).
-•	Dibandingkan minggu sebelumnya (class tunggal), pendekatan ini lebih modular, hemat kode, dan fleksibel.
-•	Kendala yang dihadapi: saat awal terjadi error karena lupa menambahkan super() di konstruktor subclass. Setelah diperbaiki, program berjalan lancar.
+
+1. Program menggunakan inheritance untuk mengelompokkan produk berdasarkan jenisnya tanpa mengulang atribut dasar (kode, nama, harga,
+     stok).
+   
+3. Superclass Produk menjadi pusat atribut dan method umum, sementara subclass (Benih, Pupuk, AlatPertanian) menambahkan atribut spesifik.
+   
+4. Dengan inheritance, program lebih mudah dikembangkan (misalnya menambah subclass baru tanpa mengubah kode lama).
+   
+5. Dibandingkan minggu sebelumnya (class tunggal), pendekatan ini lebih modular, hemat kode, dan fleksibel.
+   
+6. Kendala yang dihadapi: saat awal terjadi error karena lupa menambahkan super() di konstruktor subclass. Setelah diperbaiki, program
+   berjalan lancar.
 
 
 ## Kesimpulan
