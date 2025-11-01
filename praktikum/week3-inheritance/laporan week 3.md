@@ -121,11 +121,11 @@ public class MainInheritance {
 ## Kesimpulan
 Dengan menggunakan konsep inheritance, kita dapat:
 
-•	Menghemat penulisan kode dengan reusability tinggi.
+1. Menghemat penulisan kode dengan reusability tinggi.
 
-•	Menciptakan struktur program yang lebih rapi dan mudah dipahami.
+2. Menciptakan struktur program yang lebih rapi dan mudah dipahami.
 
-•	Mengelompokkan class berdasarkan hubungan hierarkis antar objek.
+3. Mengelompokkan class berdasarkan hubungan hierarkis antar objek.
 
 Praktikum ini memperkuat pemahaman tentang pewarisan class dan penggunaan kata kunci super dalam Java
 
