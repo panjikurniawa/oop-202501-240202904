@@ -120,19 +120,27 @@ public class MainInheritance {
 
 ## Kesimpulan
 Dengan menggunakan konsep inheritance, kita dapat:
+
 •	Menghemat penulisan kode dengan reusability tinggi.
+
 •	Menciptakan struktur program yang lebih rapi dan mudah dipahami.
+
 •	Mengelompokkan class berdasarkan hubungan hierarkis antar objek.
+
 Praktikum ini memperkuat pemahaman tentang pewarisan class dan penggunaan kata kunci super dalam Java
 
 
 ## Quiz
-1. Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan? 
+1. Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?
+   
    Jawaban:
+   
    Dengan inheritance, kode menjadi lebih efisien dan mudah dipelihara, karena atribut dan method umum dapat didefinisikan sekali saja di    superclass, kemudian diwarisi oleh subclass. Hal ini menghindari duplikasi kode, meningkatkan reusability, serta memperjelas struktur     dan hubungan antar entitas dalam sistem.
 
-2. Bagaimana cara subclass memanggil konstruktor superclass?  
+3. Bagaimana cara subclass memanggil konstruktor superclass?
+   
    Jawaban:
+   
    Subclass memanggil konstruktor superclass menggunakan kata kunci super di dalam konstruktor subclass.
    contoh:
    public Benih(String kode, String nama, double harga, int stok, String varietas) {
@@ -140,14 +148,16 @@ Praktikum ini memperkuat pemahaman tentang pewarisan class dan penggunaan kata k
     this.varietas = varietas;
 }
 
-3. Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.  
+5. Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.
+   
    Jawaban:
+   
    Beberapa contoh lain:
 
-Pestisida → atribut tambahan: jenis bahan aktif (misal: klorpirifos, abamektin).
+   Pestisida → atribut tambahan: jenis bahan aktif (misal: klorpirifos, abamektin).
 
-HasilPanen → atribut tambahan: jenis tanaman dan berat total.
+   HasilPanen → atribut tambahan: jenis tanaman dan berat total.
 
-ObatTanaman → atribut tambahan: dosis penggunaan dan bentuk (cair, bubuk).
+   ObatTanaman → atribut tambahan: dosis penggunaan dan bentuk (cair, bubuk).
 
-PerlengkapanLain → atribut tambahan: kategori (sprayer, selang, ember).
+   PerlengkapanLain → atribut tambahan: kategori (sprayer, selang, ember).
