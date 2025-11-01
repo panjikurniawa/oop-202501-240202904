@@ -99,11 +99,16 @@ public class HelloOOP {
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1c5eb71c-6f1e-4e8e-abcd-cdc22060429f" />
 
 ## Analisis
-•	Program Procedural mengeksekusi instruksi secara berurutan tanpa pemisahan tanggung jawab.
-•	Program Functional menggunakan fungsi anonim (lambda expression) untuk menghasilkan output.
-•	Program OOP membungkus data dan perilaku dalam satu kesatuan melalui class dan object.
-•	Pendekatan OOP lebih mudah dikembangkan untuk proyek besar karena struktur kode lebih terorganisir.
-•	Kendala: Awalnya program tidak bisa dijalankan karena salah memilih Run Configuration.
+
+1.Program Procedural mengeksekusi instruksi secara berurutan tanpa pemisahan tanggung jawab.
+
+2.Program Functional menggunakan fungsi anonim (lambda expression) untuk menghasilkan output.
+
+3.Program OOP membungkus data dan perilaku dalam satu kesatuan melalui class dan object.
+
+4.Pendekatan OOP lebih mudah dikembangkan untuk proyek besar karena struktur kode lebih terorganisir.
+
+5.Kendala: Awalnya program tidak bisa dijalankan karena salah memilih Run Configuration.
 → Solusi: Klik kanan pada file yang berisi main() → pilih Run ‘HelloProcedural.main()’.
 
 
