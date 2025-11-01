@@ -9,10 +9,13 @@ Topik: Class dan Object pada Pemrograman Berorientasi Objek (OOP)
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-•	Memahami konsep dasar class dan object dalam pemrograman berorientasi objek (OOP).
-•	Mampu membuat class Produk yang memiliki atribut dan metode dengan prinsip enkapsulasi.
-•	Mampu membuat class utama (MainProduk) untuk menginstansiasi objek dan menampilkan hasilnya.
+(Tuliskan tujuan praktikum minggu ini. 
+
+1.Memahami konsep dasar class dan object dalam pemrograman berorientasi objek (OOP).
+
+2.Mampu membuat class Produk yang memiliki atribut dan metode dengan prinsip enkapsulasi.
+
+3.Mampu membuat class utama (MainProduk) untuk menginstansiasi objek dan menampilkan hasilnya.
 
 
 ## Dasar Teori
@@ -116,11 +119,17 @@ credit by: 240202904 - Panji Kurniawan
 
 
 ## Analisis
-•	Program berhasil dijalankan dengan benar tanpa error.
-•	Class Produk menerapkan prinsip enkapsulasi dengan atribut private dan method getter/setter.
-•	Class MainProduk menggunakan tiga instance Produk untuk menampilkan data.
-•	Package util digunakan untuk membuat class terpisah (CreditBy) agar kode lebih modular.
-•	Kendala yang sempat muncul adalah error “class Produk is public should be declared in a file named Produk.java”, yang diselesaikan dengan mengganti nama file sesuai nama class.
+
+1.Program berhasil dijalankan dengan benar tanpa error.
+
+2.Class Produk menerapkan prinsip enkapsulasi dengan atribut private dan method getter/setter.
+
+3.Class MainProduk menggunakan tiga instance Produk untuk menampilkan data.
+
+4.Package util digunakan untuk membuat class terpisah (CreditBy) agar kode lebih modular.
+
+5.Kendala yang sempat muncul adalah error “class Produk is public should be declared in a file named Produk.java”, yang diselesaikan 
+  dengan mengganti nama file sesuai nama class.
 
 
 ## Kesimpulan
