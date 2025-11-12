@@ -63,6 +63,7 @@ Topik: Abstraction (Abstract Class & Interface)
 
 ###Pembayaran.java (abstract)
 
+
 package com.upb.agripos.model.pembayaran;
 
 public abstract class Pembayaran {
@@ -87,6 +88,7 @@ public abstract class Pembayaran {
 
 
 
+
 ###Interface: Validatable & Receiptable
 
 package com.upb.agripos.model.kontrak;
@@ -96,6 +98,8 @@ public interface Validatable {
 }
 
 
+
+
 package com.upb.agripos.model.kontrak;
 
 public interface Receiptable {
@@ -103,7 +107,10 @@ public interface Receiptable {
 }
 
 
+
+
 ###Cash.java
+
 
 package com.upb.agripos.model.pembayaran;
 
@@ -135,7 +142,11 @@ public class Cash extends Pembayaran implements Receiptable {
 }
 
 
+
+
+
 ###EWallet.java
+
 
 package com.upb.agripos.model.pembayaran;
 
@@ -175,7 +186,10 @@ public class EWallet extends Pembayaran implements Validatable, Receiptable {
 }
 
 
+
+
 ###MainAbstraction.java
+
 
 package com.upb.agripos;
 
