@@ -61,8 +61,7 @@ Topik: Abstraction (Abstract Class & Interface)
 
 ## Kode Program
 
-### Pembayaran.java
-
+Pembayaran.java (abstract)
 package com.upb.agripos.model.pembayaran;
 
 public abstract class Pembayaran {
@@ -84,7 +83,6 @@ public abstract class Pembayaran {
     public String getInvoiceNo() { return invoiceNo; }
     public double getTotal() { return total; }
 }
-
 
 Interface: Validatable & Receiptable
 
