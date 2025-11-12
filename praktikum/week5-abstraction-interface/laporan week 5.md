@@ -91,6 +91,8 @@ public abstract class Pembayaran {
 
 Interface: Validatable & Receiptable
 
+
+
 package com.upb.agripos.model.kontrak;
 
 public interface Validatable {
@@ -105,6 +107,7 @@ package com.upb.agripos.model.kontrak;
 public interface Receiptable {
     String cetakStruk();
 }
+
 
 
 
@@ -140,6 +143,7 @@ public class Cash extends Pembayaran implements Receiptable {
                 invoiceNo, totalBayar(), tunai, Math.max(0, tunai - totalBayar()));
     }
 }
+
 
 
 
@@ -184,6 +188,7 @@ public class EWallet extends Pembayaran implements Validatable, Receiptable {
                 invoiceNo, totalBayar(), akun, prosesPembayaran() ? "BERHASIL" : "GAGAL");
     }
 }
+
 
 
 
