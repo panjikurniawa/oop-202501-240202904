@@ -222,6 +222,7 @@ Pembayaran sebagai abstract class menyimpan perilaku umum, sedangkan Validatable
 ## Quiz
 1. Jelaskan perbedaan konsep dan penggunaan abstract class dan interface.
   Jawaban:
+
   Abstract class adalah kelas yang dapat memiliki field (state) dan method abstrak maupun non-abstrak (dengan implementasi). Abstract
   class digunakan ketika beberapa kelas memiliki kesamaan perilaku dan atribut dasar, tetapi juga membutuhkan implementasi spesifik di
   masing-masing subclass.
@@ -232,13 +233,15 @@ Pembayaran sebagai abstract class menyimpan perilaku umum, sedangkan Validatable
 
 2. Mengapa multiple inheritance lebih aman dilakukan dengan interface pada Java?
   Jawaban:
+
   Karena Java tidak mendukung multiple inheritance antar class untuk menghindari konflik pewarisan (seperti diamond problem). Namun,
   interface tidak membawa state (data/field) sehingga tidak menimbulkan ambiguitas pewarisan.
   Dengan kata lain, sebuah class bisa mengimplementasikan banyak interface tanpa risiko konflik karena hanya mewarisi kontrak method,
   bukan implementasi atau variabel yang bisa bentrok.
 
-3. Pada contoh Agri-POS, bagian mana yang paling tepat menjadi abstract class dan mana yang menjadi interface? Jelaskan alasannya.
+4. Pada contoh Agri-POS, bagian mana yang paling tepat menjadi abstract class dan mana yang menjadi interface? Jelaskan alasannya.
   Jawaban:
+
   Abstract class yang tepat: Pembayaran
   Karena Pembayaran memiliki state (invoiceNo, total) dan perilaku umum (totalBayar()) yang dibagikan ke semua jenis pembayaran, tetapi     detail biaya() dan prosesPembayaran() berbeda di setiap subclass (Cash, EWallet).
   → Cocok menjadi abstract class karena menyimpan logika dan atribut dasar.
