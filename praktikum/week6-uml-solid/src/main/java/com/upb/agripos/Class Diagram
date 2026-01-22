@@ -1,0 +1,66 @@
+@startuml
+package "com.upb.agripos" {
+  package "product" {
+    class ProductService {
+      - productRepository: ProductRepository
+      + addProduct(productData: ProductDTO): Product
+      + updateProduct(id: String, productData: ProductDTO): Product
+      + getProduct(id: String): Product
+      + updateStock(productId: String, quantity: int): void
+    }
+  }
+
+  class Transaction {
+    - id: String
+    - order: Order
+    - paymentMethod: String
+    - amount: double
+    - status: String
+    - createdAt: Date
+    - updatedAt: Date
+  }
+
+  interface ITransactionRepository {
+    + save(transaction: Transaction): void
+    + findById(id: String): Transaction
+    + findByDateRange(start: Date, end: Date): List<Transaction>
+  }
+
+  class PaymentMethodFactory {
+    + createPaymentMethod(type: String, params: Map<String, Object>): PaymentMethod
+  }
+
+  interface IPaymentMethod {
+    + payAmount: double
+    + paymentResult
+  }
+
+  class CashPayment {
+    - cashAmount: double
+    + CashPayment(cashAmount: double)
+    + calculateChange(amount: double): double
+  }
+
+  class EWalletPayment {
+    - walletId: String
+    - paymentGateway: PaymentGateway
+    + EWalletPayment(walletId: String, gateway: PaymentGateway)
+    + payAmount: double
+    + paymentResult
+  }
+
+  interface PaymentGateway {
+    + processPayment(amount: double, walletId: String): PaymentResult
+    + refund(transactionId: String): boolean
+  }
+
+  ITransactionRepository <|.. TransactionRepositoryImpl
+  IPaymentMethod <|.. CashPayment
+  IPaymentMethod <|.. EWalletPayment
+  PaymentMethodFactory --> IPaymentMethod : creates
+  EWalletPayment --> PaymentGateway
+  ProductService --> ProductRepository
+  Transaction --> Order
+}
+
+@enduml
