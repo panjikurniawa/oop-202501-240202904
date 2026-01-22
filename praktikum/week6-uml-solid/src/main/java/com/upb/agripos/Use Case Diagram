@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+
+actor Admin
+actor Kasir
+
+rectangle "Agri-POS System" {
+  usecase "Validasi Stok" as UC1
+  usecase "Kelola Produk" as UC2
+  usecase "Kelola Kategori" as UC3
+  usecase "Lihat Laporan" as UC4
+  
+  usecase "Tambahkan Item ke Keranjang" as UC5
+  usecase "Lihat Histori Transaksi" as UC6
+  usecase "Buat Transaksi" as UC7
+  usecase "Hapus Item dari Keranjang" as UC8
+  usecase "Proses Checkout" as UC9
+  usecase "Cetak Struk" as UC10
+  usecase "Proses Pembayaran" as UC11
+  
+  UC1 ..> UC2 : include
+  UC1 ..> UC3 : include
+  UC1 ..> UC4 : include
+  
+  UC9 ..> UC10 : include
+  UC9 ..> UC11 : include
+  
+  Admin --> UC1
+  Admin --> UC2
+  Admin --> UC3
+  Admin --> UC4
+  Admin --> UC5
+  Admin --> UC6
+  Admin --> UC7
+  Admin --> UC8
+  Admin --> UC9
+  
+  Kasir --> UC11
+}
+
+@enduml
