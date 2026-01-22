@@ -1,0 +1,36 @@
+@startuml
+actor Kasir
+participant PaymentService
+participant PaymentGateway
+participant TransactionRepository
+participant ProductService
+
+Kasir -> PaymentService: checkout(order, paymentType)
+PaymentService -> PaymentService: calculateTotal(order)
+PaymentService -> PaymentService: createPaymentMethod(paymentType)
+
+alt paymentType == "CASH"
+    PaymentService -> Kasir: requestCashAmount()
+    Kasir -> PaymentService: inputCashAmount(cash)
+    PaymentService -> PaymentService: calculateChange(cash, amount)
+    
+    alt cash < amount
+        PaymentService -> Kasir: Error: Uang tidak cukup
+    else cash >= amount
+        PaymentService -> PaymentService: PaymentResult(success, change)
+        PaymentService -> TransactionRepository: saveTransaction(order, paymentResult)
+        PaymentService -> ProductService: updateStock(order.items)
+        PaymentService -> Kasir: success + change
+    end
+else paymentType == "EWALLET"
+    alt saldo tidak cukup
+        PaymentService -> Kasir: Error: Saldo tidak cukup
+    else saldo cukup
+        PaymentService -> PaymentGateway: processPayment(amount, walletId)
+        PaymentGateway -> PaymentService: PaymentResult(success)
+        PaymentService -> TransactionRepository: saveTransaction(order, paymentResult)
+        PaymentService -> ProductService: updateStock(order.items)
+        PaymentService -> Kasir: success + receipt
+    end
+end
+@enduml
