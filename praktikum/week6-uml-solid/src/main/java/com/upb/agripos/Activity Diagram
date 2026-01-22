@@ -1,0 +1,49 @@
+@startuml
+title Kasir Checkout Process
+
+start
+:Kasir memulai checkout;
+:Kasir memilih metode pembayaran;
+
+if (Metode pembayaran?) then (Tunai)
+  :Minta input jumlah uang;
+else if (E-Wallet)
+  :Kirim request ke Payment Gateway;
+else (Lainnya)
+endif
+
+:Validasi keranjang belanja;
+if (Keranjang kosong?) then (Ya)
+  :Tampilkan pesan error;
+  stop
+else (Tidak)
+  :Hitung total belanja;
+  :Tampilkan total;
+  
+  if (Metode pembayaran?) then (Tunai)
+    :Input jumlah uang;
+    if (Uang cukup?) then (Ya)
+      :Hitung kembalian;
+    else (Tidak)
+      :Tampilkan "Uang tidak cukup";
+      stop
+    endif
+  else (E-Wallet)
+    :Validasi saldo;
+    if (Saldo cukup?) then (Ya)
+      :Proses debit;
+    else (Tidak)
+      :Return "Saldo tidak cukup";
+      stop
+    endif
+  endif
+  
+  :Update stok produk;
+  :Simpan transaksi;
+  :Generate struk;
+  :Cetak struk;
+  :Transaksi selesai;
+  stop
+endif
+
+@enduml
