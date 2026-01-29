@@ -303,6 +303,3 @@ Implementasi DAO dengan JDBC ini memberikan fondasi yang kuat untuk pengembangan
 
 
 
-
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
